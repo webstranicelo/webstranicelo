@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Primer rasporeda sekcija na stranici">
+  <defs>
+    <linearGradient id="bgSections" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff2a2a" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#ff6a00" stop-opacity=".26"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#0b0d12"/>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#bgSections)" opacity=".45"/>
+
+  <g filter="url(#shadow2)">
+    <rect x="120" y="120" width="960" height="560" rx="30" fill="rgba(0,0,0,.70)" stroke="rgba(255,255,255,.18)"/>
+
+    <!-- Sekcija 1 -->
+    <rect x="160" y="160" width="880" height="110" rx="22" fill="rgba(255,255,255,.06)"/>
+    <rect x="190" y="185" width="240" height="30" rx="15" fill="rgba(255,255,255,.85)"/>
+    <rect x="190" y="225" width="320" height="16" rx="8" fill="rgba(255,255,255,.40)"/>
+    <rect x="740" y="178" width="260" height="68" rx="18" fill="rgba(255,255,255,.10)"/>
+
+    <!-- Sekcija 2 -->
+    <rect x="160" y="290" width="880" height="120" rx="22" fill="rgba(255,255,255,.06)"/>
+    <rect x="190" y="315" width="200" height="26" rx="13" fill="rgba(255,255,255,.80)"/>
+    <rect x="190" y="350" width="280" height="14" rx="7" fill="rgba(255,255,255,.35)"/>
+    <rect x="190" y="372" width="220" height="14" rx="7" fill="rgba(255,255,255,.28)"/>
+    <rect x="520" y="305" width="240" height="88" rx="18" fill="rgba(255,255,255,.10)"/>
+    <rect x="790" y="305" width="220" height="88" rx="18" fill="rgba(255,255,255,.10)"/>
+
+    <!-- Sekcija 3 -->
+    <rect x="160" y="430" width="880" height="170" rx="22" fill="rgba(255,255,255,.06)"/>
+    <rect x="190" y="455" width="220" height="26" rx="13" fill="rgba(255,255,255,.80)"/>
+    <rect x="190" y="490" width="300" height="12" rx="6" fill="rgba(255,255,255,.34)"/>
+    <rect x="190" y="512" width="260" height="12" rx="6" fill="rgba(255,255,255,.30)"/>
+
+    <rect x="540" y="450" width="220" height="120" rx="18" fill="rgba(255,255,255,.10)"/>
+    <rect x="800" y="450" width="200" height="120" rx="18" fill="rgba(255,255,255,.10)"/>
+  </g>
+</svg>
