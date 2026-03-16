@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webstranicelo</title>
+    <meta
+      name="description"
+      content="Savremena izrada web stranica i web aplikacija. JavaScript, HTML, CSS i održavanje — webstranicelo."
+    />
+
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Preskoči na sadržaj</a>
+
+    <nav class="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#top" aria-label="webstranicelo početna">
+          <span class="brand__mark" aria-hidden="true">
+            <img
+              src="assets/logo.png"
+              alt=""
+              class="brand__logo"
+              onerror="this.style.display='none'; this.parentElement.classList.add('brand__mark--fallback')"
+            />
+          </span>
+          <span class="brand__name">webstranicelo</span>
+        </a>
+
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleBars" aria-hidden="true"></span>
+          <span class="sr-only">Meni</span>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <a class="nav__link" href="#usluge">Usluge</a>
+          <a class="nav__link" href="#process">Proces</a>
+          <a class="nav__link" href="#radovi">Radovi</a>
+          <a class="nav__link" href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="pill">Izrada web stranica • JavaScript • HTML • CSS</p>
+        <h1 class="hero__title">Sajt koji prodaje, izgleda moderno i radi brzo.</h1>
+        <p class="hero__subtitle">
+          Pravim savremene web stranice i landing stranice — fokus na brzini, dizajnu i jasnom marketingu.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#kontakt">Zatraži ponudu</a>
+          <a class="btn btn--ghost" href="#radovi">Pogledaj radove</a>
+        </div>
+
+        <div class="hero__stats" role="list">
+          <div class="stat" role="listitem">
+            <div class="stat__num">HTML</div>
+            <div class="stat__label">čista struktura koda</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__num">JavaScript</div>
+            <div class="stat__label">interakcije i animacije</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__num">Brzina</div>
+            <div class="stat__label">optimizovano učitavanje stranice</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section" id="usluge">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Usluge</h2>
+            <p class="section__desc">
+              Sve što ti treba da nastupiš ozbiljno online — od dizajna do objave.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card">
+              <div class="card__icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h3 class="card__title">Dizajn po meri</h3>
+              <p class="card__text">
+                Moderan izgled po uzoru na primer koji voliš — čisto, fokusirano i lako za korišćenje.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__icon" aria-hidden="true"><i class="fa-brands fa-js"></i></div>
+              <h3 class="card__title">JavaScript &amp; interakcije</h3>
+              <p class="card__text">
+                Animacije, modal galerije, smooth scroll, CTA dugmad — sitnice koje dižu kvalitet i konverziju.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__icon" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></div>
+              <h3 class="card__title">Brzina &amp; HTML</h3>
+              <p class="card__text">
+                Optimizovane slike, čist HTML kod, meta opisi i struktura koja jasno predstavlja tvoj sadržaj.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="process">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Proces izrade</h2>
+            <p class="section__desc">Jasni koraci, bez komplikovanja.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step__num">01</div>
+              <div class="step__body">
+                <h3 class="step__title">Dogovor &amp; cilj</h3>
+                <p class="step__text">Šta prodaješ, ko je publika i šta je sledeći klik koji želiš.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">02</div>
+              <div class="step__body">
+                <h3 class="step__title">Dizajn &amp; sadržaj</h3>
+                <p class="step__text">Struktura sekcija + marketing tekst koji jasno objašnjava vrednost.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">03</div>
+              <div class="step__body">
+                <h3 class="step__title">Kod &amp; optimizacija</h3>
+                <p class="step__text">HTML/CSS/JS, brzina, čitljiv kod i prilagođavanje za mobilni.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">04</div>
+              <div class="step__body">
+                <h3 class="step__title">Objava</h3>
+                <p class="step__text">Sajt ide online, a ti dobijaš spreman materijal za dalji rast.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="radovi">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Vizuelni stil &amp; kod</h2>
+            <p class="section__desc">
+              Minimalno, moderno, sa akcentom — i detalji koji “mirisu” na profesionalno.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <figure class="shot">
+              <img class="shot__img" src="assets/site-hero.svg" alt="Primer početne sekcije sajta" loading="lazy" />
+              <figcaption class="shot__cap">Početna sekcija sa velikom slikom i jasnim naslovom</figcaption>
+            </figure>
+            <figure class="shot">
+              <img class="shot__img" src="assets/site-sekcije.svg" alt="Primer rasporeda sekcija na stranici" loading="lazy" />
+              <figcaption class="shot__cap">Sekcije koje lepo vode posetioca kroz priču</figcaption>
+            </figure>
+            <figure class="shot">
+              <img class="shot__img" src="assets/site-mob.svg" alt="Primer izgleda sajta na telefonu" loading="lazy" />
+              <figcaption class="shot__cap">Izgled sajta na telefonu, bez skrolovanja levo–desno</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="kontakt">
+        <div class="container">
+          <div class="contact">
+            <div class="contact__left">
+              <h2 class="contact__title">Kontakt</h2>
+              <p class="contact__text">
+                Piši mi na Instagram i pošalji primer sajta koji ti se sviđa + šta ti treba (1-2 rečenice).
+              </p>
+            </div>
+            <div class="contact__right">
+              <a class="contact__ig" href="https://www.instagram.com/web_stranicelo/" target="_blank" rel="noreferrer">
+                <span class="contact__igIcon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+                <span class="contact__igText">
+                  <span class="contact__igTop">Instagram</span>
+                  <span class="contact__igBottom">web_stranicelo</span>
+                </span>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a class="footer__ig" href="https://www.instagram.com/web_stranicelo/" target="_blank" rel="noreferrer">
+          <span class="footer__igIcon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+          <span class="footer__igName">webstranicelo</span>
+        </a>
+        <span class="footer__copy">© <span id="year"></span> webstranicelo</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
