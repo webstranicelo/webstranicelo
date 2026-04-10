@@ -544,6 +544,12 @@ code {
   gap: 14px;
   flex-wrap: wrap;
 }
+.footer__links {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .footer__ig {
   display: inline-flex;
   gap: 10px;
