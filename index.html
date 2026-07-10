@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webstranicelo — Creative Web Studio | 3D animacije</title>
+    <meta name="description" content="webstranicelo — izrada premium web sajtova sa 3D animacijama, WebGL pozadinom i scroll efektima." />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL0HJXF811"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DL0HJXF811');
+    </script>
+  </head>
+  <body>
+    <div id="canvas-3d" class="canvas-3d" aria-hidden="true">
+      <div class="bg-web" id="bgWeb">
+        <div class="bg-web__track" id="bgWebTrack">
+          <img src="bg-web-studio.svg" alt="" class="bg-web__img" width="1920" height="1080" />
+        </div>
+        <div class="bg-web__track bg-web__track--front" id="bgWebTrackFront" aria-hidden="true"></div>
+      </div>
+      <div class="bg-aurora" id="bgAurora" aria-hidden="true"></div>
+      <canvas id="webgl-canvas"></canvas>
+      <div class="scene-vignette" id="sceneVignette"></div>
+    </div>
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader__ring"></div>
+      <span class="loader__text">webstranicelo</span>
+    </div>
+
+    <div class="scroll-progress-top" aria-hidden="true">
+      <div class="scroll-progress-top__fill" id="scrollTopFill"></div>
+    </div>
+
+    <div class="scroll-ui" aria-hidden="true">
+      <div class="scroll-ui__bar"><div class="scroll-ui__fill" id="scrollFill"></div></div>
+      <div class="scroll-ui__label" id="sceneLabel">Početak</div>
+    </div>
+
+    <a class="skip-link" href="#main">Preskoči na sadržaj</a>
+
+    <nav class="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#top" aria-label="webstranicelo">
+          <span class="brand__logo">
+            <img src="logo.png" alt="" width="48" height="48" loading="eager"
+              onerror="this.style.display='none'; this.parentElement.classList.add('brand__logo--fallback')" />
+          </span>
+          <span class="brand__name">webstranicelo</span>
+        </a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleBars" aria-hidden="true"></span>
+          <span class="sr-only">Meni</span>
+        </button>
+        <div class="nav__menu" id="navMenu">
+          <a class="nav__link" href="#about">O meni</a>
+          <a class="nav__link" href="#services">Usluge</a>
+          <a class="nav__link" href="#work">Radovi</a>
+          <a class="nav__link" href="#contact">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content-layer" class="content-layer">
+      <div class="scroll-world" id="scrollWorld">
+
+        <header class="section section--hero" id="top" data-scene="0">
+          <div class="hero-center">
+            <p class="hero-center__eyebrow">Web developer • 3D animacije</p>
+            <h1 class="hero-center__title">
+              Creative<br />
+              <span class="grad-text">Web Studio</span>
+            </h1>
+            <p class="hero-center__desc">
+              Pravim premium sajtove sa scroll-driven 3D animacijama —
+              landing stranice, biznis sajtovi i portfolio koji se pamti.
+            </p>
+            <div class="hero-center__cta">
+              <a class="btn btn--primary" href="#contact">Zatraži sajt</a>
+              <a class="btn btn--outline" href="#work">Pogledaj radove</a>
+            </div>
+          </div>
+          <div class="scroll-hint"><span>Skroluj</span><div class="scroll-hint__line"></div></div>
+        </header>
+
+        <main id="main">
+
+          <section class="section" id="about" data-scene="0">
+            <div class="section__inner">
+              <div class="split-head">
+                <div class="split-head__left">
+                  <span class="tag">O meni</span>
+                  <h2 class="heading">webstranicelo — tvoj 3D developer</h2>
+                  <p class="lead">Svaki projekat dobija custom dizajn, čist kod i WebGL animacije koje privlače pažnju.</p>
+                  <a class="link-arrow" href="#services">Sve usluge <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="split-head__cards">
+                  <article class="glass-card reveal-card">
+                    <div class="glass-card__icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript — brz i čitljiv kod.</p>
+                  </article>
+                  <article class="glass-card reveal-card">
+                    <div class="glass-card__icon"><i class="fa-solid fa-cube"></i></div>
+                    <h3>3D &amp; WebGL</h3>
+                    <p>Three.js scene, scroll animacije, parallax.</p>
+                  </article>
+                  <article class="glass-card reveal-card">
+                    <div class="glass-card__icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>Od ideje do live</h3>
+                    <p>Jasan proces, bez komplikacija.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section--services" id="services" data-scene="1">
+            <div class="section__inner">
+              <div class="section-head">
+                <span class="tag">Usluge</span>
+                <h2 class="heading">Šta mogu da izgradim</h2>
+                <p class="lead">Od landing stranica do kompletnih sajtova sa 3D efektima.</p>
+              </div>
+              <div class="services-grid">
+                <article class="service-card reveal-card">
+                  <div class="service-card__icon"><i class="fa-solid fa-window-maximize"></i></div>
+                  <h3>Landing stranice</h3>
+                  <p>Jedna stranica, jedan cilj — prodaja, prijava ili kontakt.</p>
+                  <a class="service-card__link" href="#contact">Saznaj više <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="service-card reveal-card">
+                  <div class="service-card__icon"><i class="fa-solid fa-cubes"></i></div>
+                  <h3>3D animacije</h3>
+                  <p>WebGL pozadine, scroll scene, interaktivni detalji.</p>
+                  <a class="service-card__link" href="#contact">Saznaj više <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="service-card reveal-card">
+                  <div class="service-card__icon"><i class="fa-solid fa-briefcase"></i></div>
+                  <h3>Biznis sajtovi</h3>
+                  <p>Profesionalan izgled za firmu ili lični brend.</p>
+                  <a class="service-card__link" href="#contact">Saznaj više <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="service-card reveal-card">
+                  <div class="service-card__icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                  <h3>Responsive</h3>
+                  <p>Savršen prikaz na telefonu, tabletu i desktopu.</p>
+                  <a class="service-card__link" href="#contact">Saznaj više <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="process" data-scene="2">
+            <div class="section__inner">
+              <div class="section-head">
+                <span class="tag">Proces</span>
+                <h2 class="heading">Kako radimo zajedno</h2>
+              </div>
+              <ol class="process-list">
+                <li class="process-item reveal-card">
+                  <span class="process-item__num">01</span>
+                  <div>
+                    <h3>Razgovor &amp; brief</h3>
+                    <p>Kažeš šta ti treba i pošalješ referencu sajta koji ti se sviđa.</p>
+                  </div>
+                </li>
+                <li class="process-item reveal-card">
+                  <span class="process-item__num">02</span>
+                  <div>
+                    <h3>Dizajn &amp; struktura</h3>
+                    <p>Dogovorimo sekcije, boje i 3D animacije.</p>
+                  </div>
+                </li>
+                <li class="process-item reveal-card">
+                  <span class="process-item__num">03</span>
+                  <div>
+                    <h3>Razvoj &amp; 3D</h3>
+                    <p>Gradim sajt — HTML, CSS, JS, WebGL. Testiram i optimizujem.</p>
+                  </div>
+                </li>
+                <li class="process-item reveal-card">
+                  <span class="process-item__num">04</span>
+                  <div>
+                    <h3>Lansiranje</h3>
+                    <p>Sajt ide online. Ostajem dostupan za izmene.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="section section--work" id="work" data-scene="3">
+            <div class="section__inner">
+              <div class="section-head">
+                <span class="tag">Portfolio</span>
+                <h2 class="heading">Sajtovi koje sam radio</h2>
+                <p class="lead">Primeri projekata — landing, biznis i brand prezentacije.</p>
+              </div>
+              <div class="work-grid">
+                <figure class="work-card reveal-card">
+                  <div class="work-card__img">
+                    <img src="portfolio-restaurant.png" alt="Restoran landing sajt" loading="lazy" width="640" height="360" />
+                  </div>
+                  <figcaption>
+                    <strong>Restoran</strong>
+                    <span>Hero, meni, rezervacija — topli identitet</span>
+                  </figcaption>
+                </figure>
+                <figure class="work-card reveal-card">
+                  <div class="work-card__img">
+                    <img src="portfolio-fitness.png" alt="Fitness studio sajt" loading="lazy" width="640" height="360" />
+                  </div>
+                  <figcaption>
+                    <strong>Fitness studio</strong>
+                    <span>Dynamic hero, paketi, energičan dark dizajn</span>
+                  </figcaption>
+                </figure>
+                <figure class="work-card reveal-card">
+                  <div class="work-card__img">
+                    <img src="portfolio-agency.png" alt="Agencija poslovni sajt" loading="lazy" width="640" height="360" />
+                  </div>
+                  <figcaption>
+                    <strong>Poslovna agencija</strong>
+                    <span>Usluge, tim, kontakt — corporate layout</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section--contact" id="contact" data-scene="4">
+            <div class="section__inner">
+              <div class="contact-block reveal-card">
+                <div class="contact-block__left">
+                  <span class="tag">Kontakt</span>
+                  <h2 class="heading">Spreman za novi projekat?</h2>
+                  <p class="lead">Pošalji poruku na Instagram — napiši šta ti treba i pošalji referencu. Odgovaram brzo.</p>
+                  <ul class="check-list">
+                    <li><i class="fa-solid fa-check"></i> Besplatan razgovor</li>
+                    <li><i class="fa-solid fa-check"></i> Prilagođena ponuda</li>
+                    <li><i class="fa-solid fa-check"></i> 3D animacije po želji</li>
+                  </ul>
+                </div>
+                <div class="contact-block__links">
+                  <a class="contact-link" href="https://www.instagram.com/web_stranicelo/" target="_blank" rel="noreferrer">
+                    <span class="contact-link__icon"><i class="fa-brands fa-instagram"></i></span>
+                    <span>
+                      <small>Instagram</small>
+                      <strong>@web_stranicelo</strong>
+                    </span>
+                  </a>
+                  <a class="contact-link" href="mailto:webstranicelo1@gmail.com">
+                    <span class="contact-link__icon"><i class="fa-solid fa-envelope"></i></span>
+                    <span>
+                      <small>Email</small>
+                      <strong>webstranicelo1@gmail.com</strong>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+
+        <footer class="footer">
+          <div class="footer__inner">
+            <span class="footer__brand">webstranicelo</span>
+            <div class="footer__links">
+              <a href="https://www.instagram.com/web_stranicelo/" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i> web_stranicelo</a>
+              <a href="mailto:webstranicelo1@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+            <span class="footer__copy">© <span id="year"></span> webstranicelo</span>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
