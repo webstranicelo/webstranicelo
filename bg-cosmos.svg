@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="glow1" cx="20%" cy="15%" r="50%">
+      <stop offset="0%" stop-color="#ff2a2a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff2a2a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#ff6a00" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="90%" r="60%">
+      <stop offset="0%" stop-color="#4411aa" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#070910" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ff2a2a" stop-opacity="0.12"/>
+    </linearGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="0.8" fill="#ffffff" opacity="0.15"/>
+    </pattern>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#070910"/>
+  <rect width="1920" height="1080" fill="url(#glow1)"/>
+  <rect width="1920" height="1080" fill="url(#glow2)"/>
+  <rect width="1920" height="1080" fill="url(#glow3)"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+
+  <!-- Perspective grid horizon -->
+  <g transform="skewY(-12) translate(0, 520)" opacity="0.7">
+    <rect x="-200" y="0" width="2320" height="600" fill="url(#grid)"/>
+    <rect x="-200" y="0" width="2320" height="600" fill="url(#gridFade)"/>
+  </g>
+
+  <!-- Floating wireframe nodes -->
+  <g fill="none" stroke="#ff2a2a" stroke-opacity="0.25" stroke-width="1">
+    <polygon points="320,180 360,220 320,260 280,220"/>
+    <polygon points="1580,140 1630,190 1580,240 1530,190"/>
+    <polygon points="960,320 1000,360 960,400 920,360"/>
+    <circle cx="720" cy="420" r="28"/>
+    <circle cx="1340" cy="380" r="20"/>
+  </g>
+
+  <!-- Connection lines -->
+  <g stroke="#ff6a00" stroke-opacity="0.12" stroke-width="0.8">
+    <line x1="320" y1="220" x2="720" y2="420"/>
+    <line x1="720" y1="420" x2="960" y2="360"/>
+    <line x1="960" y1="360" x2="1340" y2="380"/>
+    <line x1="1340" y1="380" x2="1580" y2="190"/>
+  </g>
+
+  <!-- Stars -->
+  <g fill="#ffffff">
+    <circle cx="150" cy="90" r="1.2" opacity="0.6"/>
+    <circle cx="450" cy="60" r="0.8" opacity="0.4"/>
+    <circle cx="890" cy="110" r="1" opacity="0.5"/>
+    <circle cx="1200" cy="80" r="1.4" opacity="0.7"/>
+    <circle cx="1700" cy="130" r="0.9" opacity="0.45"/>
+    <circle cx="200" cy="350" r="0.7" opacity="0.35"/>
+    <circle cx="1800" cy="300" r="1.1" opacity="0.55"/>
+    <circle cx="1050" cy="200" r="0.6" opacity="0.3"/>
+  </g>
+</svg>
