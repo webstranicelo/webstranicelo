@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL0HJXF811"></script>
@@ -21,15 +21,276 @@
       gtag('config', 'G-DL0HJXF811');
     </script>
   </head>
-  <body>
+  <body data-bg="top">
     <div id="canvas-3d" class="canvas-3d" aria-hidden="true">
-      <div class="bg-web" id="bgWeb">
-        <div class="bg-web__track" id="bgWebTrack">
-          <img src="bg-web-studio.svg" alt="" class="bg-web__img" width="1920" height="1080" />
-        </div>
-        <div class="bg-web__track bg-web__track--front" id="bgWebTrackFront" aria-hidden="true"></div>
-      </div>
       <div class="bg-aurora" id="bgAurora" aria-hidden="true"></div>
+      <div class="bg-dots" aria-hidden="true"></div>
+      <div class="showcase" id="showcase" aria-hidden="true">
+
+        <!-- ══ POČETAK ══ -->
+        <div class="mock slot-a is-active" data-for="top" data-slot="a">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">scene.js</span></div>
+          <pre class="mock__code"><code><span class="c-cm">// scroll-driven studio</span>
+<span class="c-k">const</span> scene = <span class="c-k">new</span> <span class="c-fn">Scene</span>()
+<span class="c-fn">onScroll</span>(<span class="c-k">p</span> =&gt; {
+  camera.z = <span class="c-n">-40</span> * p
+  scene.<span class="c-fn">render</span>()
+})</code></pre>
+        </div>
+        <div class="mock slot-b mock--magenta is-active" data-for="top" data-slot="b">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">landing.rs</span></div>
+          <div class="site-mini">
+            <div class="site-mini__nav"><span class="site-mini__logo"></span><span class="site-mini__links"><i></i><i></i><i></i></span></div>
+            <div class="site-mini__hero"><span class="site-mini__h1"></span><span class="site-mini__p"></span><span class="site-mini__btn"></span></div>
+            <div class="site-mini__grid"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="mock slot-e mock--blue is-active" data-for="top" data-slot="e">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">lighthouse</span></div>
+          <div class="dash">
+            <div class="dash__stats">
+              <span class="dash__stat"><b>98</b><i>perf</i></span>
+              <span class="dash__stat"><b>0.9s</b><i>load</i></span>
+              <span class="dash__stat"><b>100</b><i>seo</i></span>
+            </div>
+            <div class="dash__chart"><span style="--h: 38%"></span><span style="--h: 62%"></span><span style="--h: 46%"></span><span style="--h: 78%"></span><span style="--h: 58%"></span><span style="--h: 92%"></span><span style="--h: 70%"></span></div>
+          </div>
+        </div>
+        <div class="mock mock--phone slot-f is-active" data-for="top" data-slot="f">
+          <div class="phone">
+            <span class="phone__notch"></span>
+            <span class="phone__hero"></span>
+            <span class="phone__line"></span>
+            <span class="phone__line phone__line--short"></span>
+            <div class="phone__cards"><i></i><i></i></div>
+            <span class="phone__btn"></span>
+          </div>
+        </div>
+        <span class="glyph slot-g1 is-active" data-for="top" data-slot="g1">&lt;/&gt;</span>
+        <span class="glyph glyph--alt slot-g2 is-active" data-for="top" data-slot="g2">{ }</span>
+        <div class="mock slot-c mock--blue is-active" data-for="top" data-slot="c">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">studio.css</span></div>
+          <pre class="mock__code"><code><span class="c-a">.hero</span> {
+  <span class="c-fn">background</span>: <span class="c-s">var(--grad)</span>;
+  <span class="c-fn">transform</span>: <span class="c-fn">translateZ</span>(<span class="c-n">80px</span>);
+}</code></pre>
+        </div>
+
+        <!-- ══ O MENI ══ -->
+        <div class="mock slot-a mock--blue" data-for="about" data-slot="a">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">about.ts</span></div>
+          <pre class="mock__code"><code><span class="c-k">export const</span> dev = {
+  name: <span class="c-s">"webstranicelo"</span>,
+  focus: <span class="c-s">"3D web"</span>,
+  since: <span class="c-n">2021</span>
+}</code></pre>
+        </div>
+        <div class="mock slot-b" data-for="about" data-slot="b">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">stack</span></div>
+          <div class="stack">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+            <span class="chip chip--on">Three.js</span><span class="chip">GSAP</span><span class="chip chip--on">WebGL</span>
+          </div>
+        </div>
+        <div class="mock slot-e mock--magenta" data-for="about" data-slot="e">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">stats</span></div>
+          <div class="dash">
+            <div class="dash__stats">
+              <span class="dash__stat"><b>40+</b><i>projekata</i></span>
+              <span class="dash__stat"><b>5</b><i>godina</i></span>
+              <span class="dash__stat"><b>24h</b><i>odgovor</i></span>
+            </div>
+          </div>
+        </div>
+        <div class="mock slot-f" data-for="about" data-slot="f">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">git log</span></div>
+          <div class="gitlog">
+            <span class="gitlog__row"><b>a91f2c</b> feat: hero scene</span>
+            <span class="gitlog__row"><b>7d10be</b> perf: lazy assets</span>
+            <span class="gitlog__row"><b>3c55af</b> fix: mobile nav</span>
+          </div>
+        </div>
+        <span class="glyph slot-g1" data-for="about" data-slot="g1">=&gt;</span>
+        <div class="mock slot-c" data-for="about" data-slot="c">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">profile</span></div>
+          <div class="avatar">
+            <span class="avatar__orb"></span>
+            <span class="avatar__name">webstranicelo</span>
+            <span class="avatar__role">3D web developer</span>
+          </div>
+        </div>
+
+        <!-- ══ USLUGE ══ -->
+        <div class="mock slot-a mock--magenta" data-for="services" data-slot="a">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">Services.jsx</span></div>
+          <pre class="mock__code"><code><span class="c-tag">&lt;Service</span>
+  <span class="c-a">title</span>=<span class="c-s">"Landing"</span>
+  <span class="c-a">price</span>={<span class="c-n">190</span>}
+<span class="c-tag">/&gt;</span></code></pre>
+        </div>
+        <div class="mock slot-b" data-for="services" data-slot="b">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">Pricing.jsx</span></div>
+          <div class="ui-card">
+            <div class="ui-card__top"><span class="ui-card__badge">PRO</span><span class="ui-card__price">€ 490</span></div>
+            <span class="ui-card__line"></span>
+            <span class="ui-card__line ui-card__line--s"></span>
+            <span class="ui-card__btn"></span>
+          </div>
+        </div>
+        <div class="mock slot-e mock--blue" data-for="services" data-slot="e">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">biznis.rs</span></div>
+          <div class="site-mini site-mini--blue">
+            <div class="site-mini__nav"><span class="site-mini__logo"></span><span class="site-mini__links"><i></i><i></i><i></i></span></div>
+            <div class="site-mini__hero"><span class="site-mini__h1"></span><span class="site-mini__p"></span><span class="site-mini__btn"></span></div>
+            <div class="site-mini__grid"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="mock mock--phone slot-f mock--magenta" data-for="services" data-slot="f">
+          <div class="phone">
+            <span class="phone__notch"></span>
+            <span class="phone__hero phone__hero--magenta"></span>
+            <span class="phone__line"></span>
+            <span class="phone__line phone__line--short"></span>
+            <div class="phone__cards"><i></i><i></i></div>
+            <span class="phone__btn"></span>
+          </div>
+        </div>
+        <span class="glyph glyph--alt slot-g2" data-for="services" data-slot="g2">{ }</span>
+        <div class="mock slot-c mock--blue" data-for="services" data-slot="c">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">webgl.js</span></div>
+          <pre class="mock__code"><code><span class="c-k">new</span> <span class="c-fn">Mesh</span>(
+  <span class="c-k">new</span> <span class="c-fn">IcosahedronGeometry</span>(),
+  <span class="c-fn">glow</span>(<span class="c-n">0x00c0f0</span>)
+)</code></pre>
+        </div>
+
+        <!-- ══ PROCES ══ -->
+        <div class="mock slot-a" data-for="process" data-slot="a">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">plan</span></div>
+          <div class="steps">
+            <span class="steps__row is-done"><i></i>Brief &amp; referenca</span>
+            <span class="steps__row is-done"><i></i>Dizajn sekcija</span>
+            <span class="steps__row is-live"><i></i>Razvoj &amp; 3D</span>
+            <span class="steps__row"><i></i>Lansiranje</span>
+          </div>
+        </div>
+        <div class="mock slot-b mock--blue" data-for="process" data-slot="b">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">wireframe</span></div>
+          <div class="wire">
+            <span class="wire__nav"></span>
+            <div class="wire__hero"><span></span><span></span></div>
+            <div class="wire__cols"><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="mock slot-e mock--magenta" data-for="process" data-slot="e">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">build</span></div>
+          <div class="build">
+            <span class="build__row">bundle <b>142 kB</b></span>
+            <span class="build__bar"><i style="--w: 78%"></i></span>
+            <span class="build__row">assets <b>optimizovano</b></span>
+            <span class="build__bar"><i style="--w: 94%"></i></span>
+          </div>
+        </div>
+        <div class="mock slot-f" data-for="process" data-slot="f">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">deploy.yml</span></div>
+          <pre class="mock__code"><code><span class="c-a">steps</span>:
+  - <span class="c-fn">build</span>
+  - <span class="c-fn">test</span>
+  - <span class="c-fn">deploy</span> <span class="c-cm"># live</span></code></pre>
+        </div>
+        <span class="glyph slot-g1" data-for="process" data-slot="g1">&lt;/&gt;</span>
+
+        <!-- ══ RADOVI ══ -->
+        <div class="mock slot-a" data-for="work" data-slot="a">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">agencija.rs</span></div>
+          <div class="site-mini">
+            <div class="site-mini__nav"><span class="site-mini__logo"></span><span class="site-mini__links"><i></i><i></i><i></i></span></div>
+            <div class="site-mini__hero"><span class="site-mini__h1"></span><span class="site-mini__p"></span><span class="site-mini__btn"></span></div>
+            <div class="site-mini__grid"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="mock slot-b mock--magenta" data-for="work" data-slot="b">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">shop.rs</span></div>
+          <div class="site-mini site-mini--magenta">
+            <div class="site-mini__nav"><span class="site-mini__logo"></span><span class="site-mini__links"><i></i><i></i><i></i></span></div>
+            <div class="site-mini__grid site-mini__grid--tall"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="mock slot-e mock--blue" data-for="work" data-slot="e">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">analytics</span></div>
+          <div class="dash">
+            <div class="dash__stats">
+              <span class="dash__stat"><b>+128%</b><i>trafik</i></span>
+              <span class="dash__stat"><b>3.4k</b><i>poseta</i></span>
+              <span class="dash__stat"><b>12</b><i>upita</i></span>
+            </div>
+            <div class="dash__chart"><span style="--h: 30%"></span><span style="--h: 52%"></span><span style="--h: 44%"></span><span style="--h: 68%"></span><span style="--h: 86%"></span><span style="--h: 72%"></span><span style="--h: 96%"></span></div>
+          </div>
+        </div>
+        <div class="mock mock--phone slot-f" data-for="work" data-slot="f">
+          <div class="phone">
+            <span class="phone__notch"></span>
+            <span class="phone__hero"></span>
+            <div class="phone__cards"><i></i><i></i></div>
+            <div class="phone__cards"><i></i><i></i></div>
+            <span class="phone__btn"></span>
+          </div>
+        </div>
+        <span class="glyph glyph--alt slot-g2" data-for="work" data-slot="g2">=&gt;</span>
+        <div class="mock slot-c" data-for="work" data-slot="c">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">brand.rs</span></div>
+          <div class="site-mini site-mini--blue">
+            <div class="site-mini__nav"><span class="site-mini__logo"></span><span class="site-mini__links"><i></i><i></i></span></div>
+            <div class="site-mini__hero"><span class="site-mini__h1"></span><span class="site-mini__btn"></span></div>
+          </div>
+        </div>
+
+        <!-- ══ KONTAKT ══ -->
+        <div class="mock slot-a mock--magenta" data-for="contact" data-slot="a">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">kontakt</span></div>
+          <div class="form-mini">
+            <span class="form-mini__label">Ime</span>
+            <span class="form-mini__field"></span>
+            <span class="form-mini__label">Poruka</span>
+            <span class="form-mini__field form-mini__field--tall"></span>
+            <span class="form-mini__btn">Pošalji</span>
+          </div>
+        </div>
+        <div class="mock slot-b" data-for="contact" data-slot="b">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">poruke</span></div>
+          <div class="chat">
+            <span class="chat__in">Treba mi sajt za firmu</span>
+            <span class="chat__out">Može — šalji referencu</span>
+            <span class="chat__in">Kad može da krene?</span>
+            <span class="chat__out">Odmah ove nedelje</span>
+          </div>
+        </div>
+        <div class="mock slot-e mock--blue" data-for="contact" data-slot="e">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">contact.json</span></div>
+          <pre class="mock__code"><code>{
+  <span class="c-a">"instagram"</span>: <span class="c-s">"@web_stranicelo"</span>,
+  <span class="c-a">"odgovor"</span>: <span class="c-s">"do 24h"</span>
+}</code></pre>
+        </div>
+        <div class="mock mock--phone slot-f mock--magenta" data-for="contact" data-slot="f">
+          <div class="phone">
+            <span class="phone__notch"></span>
+            <span class="phone__hero phone__hero--magenta"></span>
+            <span class="phone__line"></span>
+            <span class="phone__line phone__line--short"></span>
+            <span class="phone__btn"></span>
+          </div>
+        </div>
+        <span class="glyph slot-g1" data-for="contact" data-slot="g1">{ }</span>
+        <div class="mock slot-c mock--blue" data-for="contact" data-slot="c">
+          <div class="mock__bar"><span class="mock__dot mock__dot--r"></span><span class="mock__dot mock__dot--y"></span><span class="mock__dot mock__dot--g"></span><span class="mock__title">termini</span></div>
+          <div class="cal">
+            <span class="cal__h">Ova nedelja</span>
+            <div class="cal__grid"><i></i><i></i><i class="is-on"></i><i></i><i class="is-on"></i><i></i><i></i></div>
+            <span class="cal__note">slobodan slot</span>
+          </div>
+        </div>
+      </div>
       <canvas id="webgl-canvas"></canvas>
       <div class="scene-vignette" id="sceneVignette"></div>
     </div>
