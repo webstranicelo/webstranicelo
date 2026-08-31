@@ -473,6 +473,7 @@
       started = true;
       boot();
     }
+    if (els.loader) els.loader.classList.add("is-hidden");
     if (window.I18N && window.I18N.ready) {
       window.I18N.ready.then(go);
       setTimeout(go, 2500);
@@ -481,9 +482,11 @@
     }
   }
 
-  if (document.readyState === "complete") start();
-
-  else window.addEventListener("load", start);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
 
 })();
 
